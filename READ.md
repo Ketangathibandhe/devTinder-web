@@ -19,3 +19,4 @@
 - you should not be access other routes without login
 - if token is not present navigate to login page 
 - Logout feature 
+- Feed card
