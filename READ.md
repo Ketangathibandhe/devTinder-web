@@ -16,3 +16,5 @@
 - whenever we are making api calls so pass axios =>{withCredentials:true}
 - install redux toolkit
 - configure store => Provider => createSlice => add reducer to store 
+- you should not be access other routes without login
+- if token is not present navigate to login page 
