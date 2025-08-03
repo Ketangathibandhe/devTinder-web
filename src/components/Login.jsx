@@ -7,10 +7,11 @@ import { BASE_URL } from "../utils/constants";
 const Login = () => {
   const [emailId, setEmailId] = useState("kg@gmail.com");
   const [password, setPassword] = useState("KetanGathibandhe@1234");
+  const [error , setError] = useState("")
   const dispatch = useDispatch()
   const navigate = useNavigate()
+
   const handleLogin = async () => {
-    
     try {
       const res = await axios.post(BASE_URL+"/login", {  //axios is a npm package used for api call . we can use fetch also but axios is easy 
         emailId,
@@ -19,6 +20,7 @@ const Login = () => {
       dispatch(addUser(res.data));
       navigate("/")
     } catch (error) {
+      setError(error?.request?.response ||"Something went wrong")
       console.error(error);
     }
   };
@@ -56,6 +58,7 @@ const Login = () => {
               </label>
             </div>
           </div>
+          <p className="text-red-400">{error}</p>
           <div className="card-actions justify-center">
             <button className="btn btn-primary" onClick={handleLogin}>Login</button>
           </div>
