@@ -7,7 +7,7 @@ function NavBar() {
   const user = useSelector(store=>store.user)
   const dispatch = useDispatch()
   const Navigate = useNavigate()
-  console.log(user)
+
  const handleLogout = async()=>{
   try{
     await axios.post(BASE_URL+'/logout',{},{withCredentials:true});
@@ -51,11 +51,13 @@ function NavBar() {
                 </Link>
               </li>
               <li>
-                <a>Settings</a>
+                <Link to='/connections'>Connections</Link>
               </li>
               <li>
                 <a onClick={handleLogout}>Logout</a>
               </li>
+                  
+
             </ul>
           </div>
         </div>
@@ -65,3 +67,7 @@ function NavBar() {
 }
 
 export default NavBar
+
+
+
+

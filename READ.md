@@ -20,3 +20,7 @@
 - if token is not present navigate to login page 
 - Logout feature 
 - Feed card
+- Build the user card on feed
+- Edit profile feature
+- show toast message on save of profile
+- see all my connection feature
