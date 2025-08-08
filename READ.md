@@ -24,3 +24,4 @@
 - Edit profile feature
 - show toast message on save of profile
 - see all my connection feature
+- accept / reject connection request
